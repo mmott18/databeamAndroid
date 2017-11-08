@@ -16,4 +16,8 @@
     <string name="title_activity_databeam_main">DatabeamMain</string>
     <string name="title_activity_test_nfc1">TestNFC1</string>
     <string name="title_activity_test_nfc2">TestNFC2</string>
+    <string name="getFirst">First Name</string>
+    <string name="getMiddle">Middle Name</string>
+    <string name="getLast">Last Name</string>
+    <string name="storeTextButton">Store</string>
 </resources>

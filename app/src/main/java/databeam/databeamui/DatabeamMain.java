@@ -57,7 +57,7 @@ public class DatabeamMain extends AppCompatActivity {
                 manager.enqueue(request);
                 startActivity(new Intent(DatabeamMain.this, DatabeamDisplayForm1.class));
             }
-                               });
+        });
 
         RadioButton rb2 = (RadioButton) findViewById(R.id.directdeposit);
         rb2.setOnClickListener(new View.OnClickListener() {
@@ -78,6 +78,14 @@ public class DatabeamMain extends AppCompatActivity {
                 DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
                 manager.enqueue(request);
                 startActivity(new Intent(DatabeamMain.this, DatabeamDisplayForm2.class));
+            }
+        });
+
+        RadioButton rb3 = (RadioButton) findViewById(R.id.form3);
+        rb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DatabeamMain.this, Testing.class));
             }
         });
     }

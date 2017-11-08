@@ -50,6 +50,7 @@
                 <data android:host="*" />
             </intent-filter>
         </activity>
+        <activity android:name=".Testing"></activity>
     </application>
 
 </manifest>
