@@ -58,6 +58,8 @@
             android:name=".TestNFC2"
             android:label="@string/title_activity_test_nfc2"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <service android:name=".TestNFC3" />
     </application>
 
 </manifest>
