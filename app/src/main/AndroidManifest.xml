@@ -50,6 +50,7 @@
                 <data android:host="*" />
             </intent-filter>
         </activity>
+        <activity android:name=".Testing"></activity>
         <activity
             android:name=".TestNFC1"
             android:label="@string/title_activity_test_nfc1"

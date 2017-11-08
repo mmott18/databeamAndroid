@@ -32,12 +32,12 @@
         app:layout_constraintLeft_toLeftOf="@+id/form1" />
 
     <RadioButton
-        android:id="@+id/form3"
+        android:id="@+id/testingButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/directdeposit"
-        android:text="Form Three"
+        android:text="@string/testingActivity"
+        app:layout_constraintLeft_toLeftOf="@+id/directdeposit"
         app:layout_constraintTop_toBottomOf="@+id/directdeposit"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintLeft_toLeftOf="@+id/directdeposit" />
+        tools:layout_constraintLeft_creator="1" />
 </android.support.constraint.ConstraintLayout>

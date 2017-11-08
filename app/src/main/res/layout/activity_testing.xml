@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="databeam.databeamui.Testing"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/getFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="38dp"
+        android:layout_marginTop="150dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/getFirst"
+        app:layout_constraintBottom_toTopOf="@+id/getLast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/storeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="185dp"
+        android:text="@string/storeTextButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getLast" />
+
+    <EditText
+        android:id="@+id/getMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/getMiddle"
+        app:layout_constraintStart_toStartOf="@+id/getFirst"
+        app:layout_constraintTop_toBottomOf="@+id/getFirst" />
+
+    <EditText
+        android:id="@+id/getLast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/getLast"
+        app:layout_constraintBottom_toTopOf="@+id/storeText"
+        app:layout_constraintStart_toStartOf="@+id/getMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/getFirst" />
+</android.support.constraint.ConstraintLayout>
