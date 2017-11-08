@@ -30,7 +30,8 @@ public class Testing extends AppCompatActivity {
                 String typedFirst = inputFirst.getText().toString();
                 String typedMiddle = inputMiddle.getText().toString();
                 String typedLast = inputLast.getText().toString();
-                System.out.println(typedFirst + " " + typedMiddle + " " + typedLast);
+                String fullName = typedFirst + " " + typedMiddle + " " + typedLast;
+                System.out.println(fullName);
             }
         });
     }
