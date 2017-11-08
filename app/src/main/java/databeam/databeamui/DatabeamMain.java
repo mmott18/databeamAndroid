@@ -81,7 +81,7 @@ public class DatabeamMain extends AppCompatActivity {
             }
         });
 
-        RadioButton rb3 = (RadioButton) findViewById(R.id.form3);
+        RadioButton rb3 = (RadioButton) findViewById(R.id.testingButton);
         rb3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
