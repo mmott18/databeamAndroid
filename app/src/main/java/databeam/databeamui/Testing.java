@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ToggleButton;
 
 public class Testing extends AppCompatActivity {
+    public static String fullName = "John Nobody Doe";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +31,8 @@ public class Testing extends AppCompatActivity {
                 String typedFirst = inputFirst.getText().toString();
                 String typedMiddle = inputMiddle.getText().toString();
                 String typedLast = inputLast.getText().toString();
-                String fullName = typedFirst + " " + typedMiddle + " " + typedLast;
-                System.out.println(fullName);
+                fullName = typedFirst + " " + typedMiddle + " " + typedLast;
+                //System.out.println(fullName);
             }
         });
     }

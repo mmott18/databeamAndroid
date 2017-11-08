@@ -4,7 +4,6 @@ import android.nfc.cardemulation.HostApduService;
 import android.os.Bundle;
 
 import java.io.UnsupportedEncodingException;
-import javacard.framework.*;
 
 /**
  * Created by justin on 11/7/17.
@@ -18,10 +17,9 @@ public class TestNFC3 extends HostApduService {
         switch(bytes[1]){
             case 0x01:
                 return "Command 1 Selected!".getBytes();
-                break;
             case 0x02:
-                return strToHex(userInput);
-                break;
+
+                return strToHex(Testing.fullName);
             default:
         }       return "Incorrect/Missing Command".getBytes();
 
@@ -38,6 +36,7 @@ public class TestNFC3 extends HostApduService {
             return userInput.getBytes("UTF-8");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
+            return "Unsupported Encoding".getBytes();
         }
     }
 }
