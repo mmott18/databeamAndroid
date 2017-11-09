@@ -1,12 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-
 <resources>
     <string name="app_name">Databeam</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Username</string>
     <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This username is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -23,11 +21,13 @@
     <string name="getLast">Last Name</string>
     <string name="storeTextButton">Store</string>
     <string name="testingActivity">Open Testing</string>
+
+    <!--Strings related to the NFC protocol-->
+    <string name="aiddescription">aiddescription</string>
+    <string name="servicedesc">servicedesc</string>
+    <!--End NFC Strings-->
     <string name="registerButton">New User? Tap Here</string>
     <string name="title_activity_register">Complete Registration</string>
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
 </resources>
-
-
-
