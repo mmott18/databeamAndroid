@@ -21,4 +21,8 @@
     <string name="getLast">Last Name</string>
     <string name="storeTextButton">Store</string>
     <string name="testingActivity">Open Testing</string>
+
+    <!--Strings related to the NFC protocol-->
+    <string name="aiddescription">aiddescription</string>
+    <string name="servicedesc">servicedesc</string>
 </resources>

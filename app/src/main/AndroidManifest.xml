@@ -51,16 +51,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".Testing"></activity>
-        <activity
-            android:name=".TestNFC1"
-            android:label="@string/title_activity_test_nfc1"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".TestNFC2"
-            android:label="@string/title_activity_test_nfc2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
 
-        <service android:name=".TestNFC3" />
+        <service android:name=".HostNFC" android:exported="true" android:permission="android.permission.BIND_NFC_SERVICE" >
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE"/>
+            </intent-filter>
+            <meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@xml/apduservice"/>
+        </service>
     </application>
 
 </manifest>

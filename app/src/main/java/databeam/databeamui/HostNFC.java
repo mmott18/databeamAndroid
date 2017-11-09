@@ -6,10 +6,10 @@ import android.os.Bundle;
 import java.io.UnsupportedEncodingException;
 
 /**
- * Created by justin on 11/7/17.
+ * Created by Justin Jagielski on 11/7/17.
  */
 
-public class TestNFC3 extends HostApduService {
+public class HostNFC extends HostApduService {
 
 
     @Override
