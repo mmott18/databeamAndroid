@@ -80,7 +80,7 @@ public class DatabeamAuth extends AppCompatActivity implements LoaderCallbacks<C
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-                if (id == R.id.login || id == EditorInfo.IME_NULL) {
+                if (id == R.id.login_form || id == EditorInfo.IME_NULL) {
                     attemptLogin();
                     return true;
                 }
@@ -93,6 +93,14 @@ public class DatabeamAuth extends AppCompatActivity implements LoaderCallbacks<C
             @Override
             public void onClick(View view) {
                 attemptLogin();
+            }
+        });
+
+        Button registerButton = (Button) findViewById(R.id.user_register_button);
+        registerButton.setOnClickListener( new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DatabeamAuth.this, Register.class));
             }
         });
 
