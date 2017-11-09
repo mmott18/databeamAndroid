@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.nfc.NfcAdapter;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
@@ -28,6 +29,7 @@ import java.util.Random;
 
 public class DatabeamMain extends AppCompatActivity {
     private static final int REQUEST_WRITE = 0;
+    private NfcAdapter nfcAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,8 @@ public class DatabeamMain extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE);
+
+        nfcAdapter.getDefaultAdapter(this);
 
         RadioButton rb1 = (RadioButton) findViewById(R.id.form1);
         rb1.setOnClickListener(new View.OnClickListener() {
@@ -89,5 +93,18 @@ public class DatabeamMain extends AppCompatActivity {
             }
         });
     }
+
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        nfcAdapter.enableReaderMode(this, this, NfcAdapter.FLAG_READER_NFC_A | NfcAdapter.FLAG_READER_SKIP_NDEF_CHECK,
+//                null);
+//    }
+//
+//    @Override
+//    public void onPause() {
+//        super.onPause();
+//        nfcAdapter.disableReaderMode(this);
+//    }
 
 }
