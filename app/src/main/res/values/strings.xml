@@ -21,5 +21,6 @@
     <string name="getLast">Last Name</string>
     <string name="storeTextButton">Store</string>
     <string name="testingActivity">Open Testing</string>
-    <string name="registerButton">Register</string>
+    <string name="registerButton">New User? Tap Here</string>
+    <string name="title_activity_register">Complete Registration</string>
 </resources>

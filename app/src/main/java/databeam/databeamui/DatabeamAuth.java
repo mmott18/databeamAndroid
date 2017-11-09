@@ -96,6 +96,14 @@ public class DatabeamAuth extends AppCompatActivity implements LoaderCallbacks<C
             }
         });
 
+        Button registerButton = (Button) findViewById(R.id.user_register_button);
+        registerButton.setOnClickListener( new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DatabeamAuth.this, Register.class));
+            }
+        });
+
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }

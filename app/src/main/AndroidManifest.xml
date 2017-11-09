@@ -50,7 +50,7 @@
                 <data android:host="*" />
             </intent-filter>
         </activity>
-        <activity android:name=".Testing"></activity>
+        <activity android:name=".Testing" />
         <activity
             android:name=".TestNFC1"
             android:label="@string/title_activity_test_nfc1"
@@ -58,9 +58,14 @@
         <activity
             android:name=".TestNFC2"
             android:label="@string/title_activity_test_nfc2"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service android:name=".TestNFC3" />
+
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
