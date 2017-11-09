@@ -15,6 +15,7 @@ import android.widget.ToggleButton;
 
 public class Testing extends AppCompatActivity {
     public static String fullName = "John Nobody Doe";
+    Bundle bundle = getIntent().getExtras();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
