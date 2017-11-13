@@ -13,38 +13,40 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="173dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="First Name"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/storeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/storeTextButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/getLast" />
 
     <EditText
         android:id="@+id/getMiddle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Middle Name"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/getFirst"
-        app:layout_constraintTop_toBottomOf="@+id/getFirst" />
+        app:layout_constraintTop_toTopOf="@+id/getFirst" />
 
     <EditText
         android:id="@+id/getLast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Last Name"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/getMiddle"
-        app:layout_constraintTop_toBottomOf="@+id/getMiddle" />
+        app:layout_constraintTop_toTopOf="@+id/getMiddle" />
+
+    <Button
+        android:id="@+id/storeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Hold to transmit"
+        app:layout_constraintStart_toStartOf="@+id/getLast"
+        app:layout_constraintTop_toBottomOf="@+id/getLast" />
 </android.support.constraint.ConstraintLayout>
