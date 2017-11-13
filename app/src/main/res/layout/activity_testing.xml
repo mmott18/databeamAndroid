@@ -10,13 +10,11 @@
     <EditText
         android:id="@+id/getFirst"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="38dp"
-        android:layout_marginTop="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="173dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/getFirst"
-        app:layout_constraintBottom_toTopOf="@+id/getLast"
+        android:hint="First Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,9 +23,7 @@
         android:id="@+id/storeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="185dp"
         android:text="@string/storeTextButton"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/getLast" />
@@ -38,7 +34,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/getMiddle"
+        android:hint="Middle Name"
         app:layout_constraintStart_toStartOf="@+id/getFirst"
         app:layout_constraintTop_toBottomOf="@+id/getFirst" />
 
@@ -48,8 +44,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/getLast"
-        app:layout_constraintBottom_toTopOf="@+id/storeText"
+        android:hint="Last Name"
         app:layout_constraintStart_toStartOf="@+id/getMiddle"
-        app:layout_constraintTop_toBottomOf="@+id/getFirst" />
+        app:layout_constraintTop_toBottomOf="@+id/getMiddle" />
 </android.support.constraint.ConstraintLayout>
