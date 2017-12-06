@@ -46,7 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:text="Hold to transmit"
+        android:text="@string/storeTextButton"
         app:layout_constraintStart_toStartOf="@+id/getLast"
         app:layout_constraintTop_toBottomOf="@+id/getLast" />
 </android.support.constraint.ConstraintLayout>

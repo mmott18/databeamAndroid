@@ -19,7 +19,7 @@
     <string name="getFirst">First Name</string>
     <string name="getMiddle">Middle Name</string>
     <string name="getLast">Last Name</string>
-    <string name="storeTextButton">Store</string>
+    <string name="storeTextButton">Press to transmit</string>
     <string name="testingActivity">Open Testing</string>
 
     <!--Strings related to the NFC protocol-->
