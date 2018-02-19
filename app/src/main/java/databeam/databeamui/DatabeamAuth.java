@@ -30,6 +30,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+
 import databeam.databeamui.R;
 
 import java.util.ArrayList;
@@ -75,6 +80,15 @@ public class DatabeamAuth extends AppCompatActivity implements LoaderCallbacks<C
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        GoogleSignInClient mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        updateUI(account);
 
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
