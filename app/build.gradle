@@ -30,8 +30,10 @@ dependencies {
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.google.android.gms:play-services-auth:11.8.0'
-    compile files('libs/itextpdf-5.5.13.jar')
-    compile files('libs/itextg-5.5.4-sources.jar')
-    compile files('libs/itextg-5.5.4-javadoc.jar')
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.itextpdf:itextg:5.5.9'
+    //compile files('libs/itextpdf-5.5.13.jar')
+    //compile files('libs/itextg-5.5.4-sources.jar')
+    //compile files('libs/itextg-5.5.4-javadoc.jar')
     testCompile 'junit:junit:4.12'
 }
