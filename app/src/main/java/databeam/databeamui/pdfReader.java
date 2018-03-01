@@ -8,7 +8,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class PdfReadExample {
+public class pdfReader {
 
     private static final String FILE_NAME = "/tmp/itext.pdf";
 
