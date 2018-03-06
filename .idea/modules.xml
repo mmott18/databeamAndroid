@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/databeamAndroid.iml" filepath="$PROJECT_DIR$/databeamAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/itextpdf-5.5.13/itextpdf-5.5.13.iml" filepath="$PROJECT_DIR$/itextpdf-5.5.13/itextpdf-5.5.13.iml" />
-      <module fileurl="file://$PROJECT_DIR$/itextpdf-5.5.13/itextpdf-5.5.13.iml" filepath="$PROJECT_DIR$/itextpdf-5.5.13/itextpdf-5.5.13.iml" />
     </modules>
   </component>
 </project>
