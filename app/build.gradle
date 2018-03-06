@@ -31,8 +31,16 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.tom_roush:pdfbox-android:1.8.9.1'
     compile 'com.google.android.gms:play-services-auth:11.8.0'
+<<<<<<< HEAD
 //    compile files('libs/itextpdf-5.5.13.jar')
 //    compile files('libs/itextg-5.5.4-sources.jar')
 //    compile files('libs/itextg-5.5.4-javadoc.jar')
+=======
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.itextpdf:itextg:5.5.9'
+    //compile files('libs/itextpdf-5.5.13.jar')
+    //compile files('libs/itextg-5.5.4-sources.jar')
+    //compile files('libs/itextg-5.5.4-javadoc.jar')
+>>>>>>> 237e06e6bb68228bdd9b49028b58b416a5b295d2
     testCompile 'junit:junit:4.12'
 }
