@@ -42,7 +42,7 @@ import java.security.Security;
 import java.util.ArrayList;
 import java.util.List;
 
-public class pdfReader extends Activity {
+public class pdfReader extends DatabeamDisplayForm1 {
     File root;
     AssetManager assetManager;
     Bitmap pageImage;
