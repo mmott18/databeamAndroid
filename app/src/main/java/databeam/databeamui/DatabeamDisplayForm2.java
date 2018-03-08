@@ -35,6 +35,7 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
     boolean writeMode;
     Tag myTag;
     Context context;
+    static final int PICK_PDF_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +91,33 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
         }
     }
 
+
+
+    private void openPDF(){
+       //This method does not require a verbose file path
+        Intent intent = new Intent();
+        intent.setType("application/pdf");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        try {
+            startActivityForResult(Intent.createChooser(intent, "Select PDF"), PICK_PDF_REQUEST);
+
+        } catch(ActivityNotFoundException e){
+            Toast.makeText(getApplicationContext(),"There is no File Browser", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+    }
+
+    @Override //Handles what to do once the User selects the PDF to read
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == PICK_PDF_REQUEST){
+            if(resultCode == RESULT_OK){
+                //The user picked a PDF
+                //TODO: Send the PDF to be parsed by PDFBox
+                Uri pdfUri = data.getData(); //The Uri to the PDF
+                
+            }
+        }
+    }
     /******************************************************************************
      **********************************Read From NFC Tag***************************
      ******************************************************************************/
