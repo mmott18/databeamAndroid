@@ -42,7 +42,7 @@ import java.security.Security;
 import java.util.ArrayList;
 import java.util.List;
 
-public class pdfReader extends DatabeamDisplayForm1 {
+public class pdfReader extends Activity {
     File root;
     AssetManager assetManager;
     Bitmap pageImage;
@@ -51,7 +51,7 @@ public class pdfReader extends DatabeamDisplayForm1 {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_databeam_display_form1);
+        setContentView(R.layout.activity_databeam_display_form1); //FIXME: not sure which layout to use
     }
 
     @Override
@@ -63,7 +63,7 @@ public class pdfReader extends DatabeamDisplayForm1 {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.main, menu); //FIXME: not sure which menu to use
         return true;
     }
 
@@ -76,7 +76,7 @@ public class pdfReader extends DatabeamDisplayForm1 {
         // Find the root of the external storage.
         root = android.os.Environment.getExternalStorageDirectory();
         assetManager = getAssets();
-        tv = (TextView) findViewById(R.id.directdeposit);
+        tv = (TextView) findViewById(R.id.directdeposit); //FIXME: not sure which view to use
     }
 
     /**
