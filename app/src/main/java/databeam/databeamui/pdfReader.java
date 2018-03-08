@@ -42,7 +42,7 @@ import java.security.Security;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends Activity {
+public class pdfReader extends Activity {
     File root;
     AssetManager assetManager;
     Bitmap pageImage;
@@ -63,7 +63,7 @@ public class MainActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        //getMenuInflater().inflate(R.menu, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -76,7 +76,7 @@ public class MainActivity extends Activity {
         // Find the root of the external storage.
         root = android.os.Environment.getExternalStorageDirectory();
         assetManager = getAssets();
-        tv = (TextView) findViewById(R.id.statusTextView);
+        tv = (TextView) findViewById(R.id.directdeposit);
     }
 
     /**
@@ -183,21 +183,21 @@ public class MainActivity extends Activity {
             PDTextField field = (PDTextField) acroForm.getField("TextField");
             field.setValue("Filled Text Field");
             // Optional: don't allow this field to be edited
-            field.setReadOnly(true);
+            root.setReadOnly();
 
-            PDField checkbox = acroForm.getField("Checkbox");
+            PDField checkbox = (PDField) acroForm.getField("Checkbox");
             ((PDCheckbox) checkbox).check();
 
-            PDField radio = acroForm.getField("Radio");
+            PDField radio = (PDField) acroForm.getField("Radio");
             ((PDRadioButton)radio).setValue("Second");
 
-            PDField listbox = acroForm.getField("ListBox");
+            PDField listbox = (PDField) acroForm.getField("ListBox");
             List<Integer> listValues = new ArrayList<>();
             listValues.add(1);
             listValues.add(2);
             ((PDListBox) listbox).setSelectedOptionsIndex(listValues);
 
-            PDField dropdown = acroForm.getField("Dropdown");
+            PDField dropdown = (PDField) acroForm.getField("Dropdown");
             ((PDComboBox) dropdown).setValue("Hello");
 
             String path = root.getAbsolutePath() + "/Download/FilledForm.pdf";
@@ -300,7 +300,7 @@ public class MainActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        ImageView imageView = (ImageView) findViewById(R.id.renderedImageView);
+                        ImageView imageView = (ImageView) findViewById(R.id.form1view);
                         imageView.setImageBitmap(pageImage);
                     }
                 });
