@@ -114,7 +114,7 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
                 //The user picked a PDF
                 //TODO: Send the PDF to be parsed by PDFBox
                 Uri pdfUri = data.getData(); //The Uri to the PDF
-                
+
             }
         }
     }

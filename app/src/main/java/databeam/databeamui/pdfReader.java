@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -306,5 +307,16 @@ public class pdfReader extends Activity {
                 });
             }
         }.start();
+    }
+
+    /**
+     * Method for reading the forms of a PDF
+     */
+    private void readForms(Uri input) throws IOException{
+        File pdfToOpen = new File(input.toString());
+        PDDocument pdDoc = PDDocument.load(pdfToOpen);
+        PDDocumentCatalog pdCatalog = pdDoc.getDocumentCatalog();
+        PDAcroForm pdAcroForm = pdCatalog.getAcroForm();
+
     }
 }
