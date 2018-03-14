@@ -18,6 +18,8 @@ import android.view.View;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.tom_roush.pdfbox.util.PDFBoxResourceLoader;
+
 import databeam.databeamui.R;
 
 import java.io.File;
@@ -41,6 +43,7 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_databeam_display_form2);
+        PDFBoxResourceLoader.init(getApplicationContext());
         openPDF();
 
         ToggleButton nfcButton = (ToggleButton) findViewById(R.id.toggleNFC);
@@ -97,6 +100,9 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
                 //The user picked a PDF
                 //TODO: Send the PDF to be parsed by PDFBox
                 Uri pdfUri = data.getData(); //The Uri to the PDF
+
+                pdfReader newReader = new pdfReader();
+                newReader.stripText(findViewById(R.id.form1view));
 
             }
         }
