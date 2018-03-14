@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
@@ -52,7 +53,7 @@ public class pdfReader extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_databeam_display_form1); //FIXME: not sure which layout to use
+        setContentView(R.layout.activity_databeam_display_form2); //FIXME: not sure which layout to use
     }
 
     @Override
@@ -229,6 +230,7 @@ public class pdfReader extends Activity {
 
     /**
      * Strips the text from a PDF and displays the text on screen
+     * @param v
      */
     public void stripText(View v) {
         String parsedText = null;
