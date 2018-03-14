@@ -102,6 +102,7 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
                 //TODO: Send the PDF to be parsed by PDFBox
                 Uri pdfUri = data.getData(); //The Uri to the PDF
                 try{
+                    Toast.makeText(getApplicationContext(),"Selected PDF at " + data.toString(), Toast.LENGTH_SHORT).show();
                     pdfReader formRead = new pdfReader();
                     formRead.readForms(pdfUri);
                 } catch(IOException e){
