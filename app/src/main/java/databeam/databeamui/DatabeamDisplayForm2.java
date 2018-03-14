@@ -108,8 +108,6 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                pdfReader newReader = new pdfReader();
-
             }
         }
     }
