@@ -41,7 +41,7 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_databeam_display_form2);
-        openPDF(Environment.getExternalStorageDirectory() + dir + "/directdeposit.pdf");
+        openPDF();
 
         ToggleButton nfcButton = (ToggleButton) findViewById(R.id.toggleNFC);
         nfcButton.setOnClickListener(new View.OnClickListener() {
@@ -73,23 +73,6 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
 //        } else
 //            Toast.makeText(getApplicationContext(), "File path is incorrect.", Toast.LENGTH_LONG).show();
 //    }
-    private void openPDF(String resumePdfFile) {
-        //file should contain path of pdf file
-        Uri path = Uri.fromFile(new File(String.valueOf(Uri.parse(resumePdfFile))));
-        Log.e("create pdf uri path==>", "" + path);
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setDataAndType(path, "application/pdf");
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-            finish();
-        } catch (ActivityNotFoundException e) {
-            Toast.makeText(getApplicationContext(),
-                    "There is no PDF Viewer",
-                    Toast.LENGTH_SHORT).show();
-            finish();
-        }
-    }
 
 
 
