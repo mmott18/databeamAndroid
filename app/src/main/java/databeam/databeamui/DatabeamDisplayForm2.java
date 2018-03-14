@@ -21,6 +21,7 @@ import android.widget.ToggleButton;
 import databeam.databeamui.R;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 
@@ -114,6 +115,12 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
                 //The user picked a PDF
                 //TODO: Send the PDF to be parsed by PDFBox
                 Uri pdfUri = data.getData(); //The Uri to the PDF
+                try{
+                    pdfReader formRead = new pdfReader();
+                    formRead.readForms(pdfUri);
+                } catch(IOException e){
+                    e.printStackTrace();
+                }
 
             }
         }
