@@ -102,7 +102,6 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
                 Uri pdfUri = data.getData(); //The Uri to the PDF
 
                 pdfReader newReader = new pdfReader();
-                newReader.stripText(findViewById(R.id.form1view));
 
             }
         }
