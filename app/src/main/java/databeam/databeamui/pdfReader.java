@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tom_roush.pdfbox.pdmodel.PDDocument;
 import com.tom_roush.pdfbox.pdmodel.PDDocumentCatalog;
@@ -78,7 +79,7 @@ public class pdfReader extends Activity {
         // Enable Android-style asset loading (highly recommended)
         PDFBoxResourceLoader.init(getApplicationContext());
         // Find the root of the external storage.
-        root = android.os.Environment.getExternalStorageDirectory();
+        root = android.os.Environment.getRootDirectory();
         assetManager = getAssets();
         tv = (TextView) findViewById(R.id.directdeposit); //FIXME: not sure which view to use
     }
@@ -183,7 +184,8 @@ public class pdfReader extends Activity {
             FileOutputStream fileOut = new FileOutputStream(renderFile);
             pageImage.compress(Bitmap.CompressFormat.JPEG, 100, fileOut);
             fileOut.close();
-            tv.setText("Successfully rendered image to " + path);
+            //tv.setText("Successfully rendered image to " + path);
+            Toast.makeText(getApplicationContext(),"Successfully rendered image to " + path, Toast.LENGTH_SHORT).show();
             //displayRenderedImage();
         } catch(Exception e){
             e.printStackTrace();
@@ -334,7 +336,7 @@ public class pdfReader extends Activity {
      * Method for reading the forms of a PDF
      */
     public void readForms(Uri input, View v) throws IOException, URISyntaxException{
-        File pdfToOpen = new File(new URI(input.getPath()));
+        File pdfToOpen = new File(input.getPath());
         PDDocument pdDoc = PDDocument.load(pdfToOpen);
         //PDDocumentCatalog pdCatalog = pdDoc.getDocumentCatalog();
         //PDAcroForm pdAcroForm = pdCatalog.getAcroForm();
