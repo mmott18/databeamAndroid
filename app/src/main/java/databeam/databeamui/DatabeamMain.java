@@ -21,6 +21,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import databeam.databeamui.R;
 
@@ -71,6 +72,9 @@ public class DatabeamMain extends AppCompatActivity {
                 String url = "https://www.chase.com/content/dam/chasecom/en/checking/documents/45969_directdeposit.pdf";
                 File applictionFile =  new File(Environment.getExternalStoragePublicDirectory(
                         Environment.DIRECTORY_DOWNLOADS)+ "/directdepost.pdf");
+                for (int i=0;i<3;i++) {
+                    Toast.makeText(getApplicationContext(), "Selected PDF at " + applictionFile.toString(), Toast.LENGTH_LONG).show();
+                }
                 if(!applictionFile.exists()) {
                     DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
                     request.setDescription("Direct Deposit Form");
@@ -87,8 +91,8 @@ public class DatabeamMain extends AppCompatActivity {
                     // get download service and enqueue file
                     DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
                     manager.enqueue(request);
-                    startActivity(new Intent(DatabeamMain.this, DatabeamDisplayForm2.class));
                 }
+                startActivity(new Intent(DatabeamMain.this, DatabeamDisplayForm2.class));
             }
         });
 
