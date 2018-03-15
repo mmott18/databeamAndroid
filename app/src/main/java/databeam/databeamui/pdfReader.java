@@ -40,6 +40,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.security.Security;
 import java.util.ArrayList;
 import java.util.List;
@@ -331,8 +333,8 @@ public class pdfReader extends Activity {
     /**
      * Method for reading the forms of a PDF
      */
-    public void readForms(Uri input) throws IOException{
-        File pdfToOpen = new File(input.toString());
+    public void readForms(Uri input) throws IOException, URISyntaxException{
+        File pdfToOpen = new File(new URI(input.getPath()));
         PDDocument pdDoc = PDDocument.load(pdfToOpen);
         PDDocumentCatalog pdCatalog = pdDoc.getDocumentCatalog();
         PDAcroForm pdAcroForm = pdCatalog.getAcroForm();
