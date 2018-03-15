@@ -1,5 +1,6 @@
 package databeam.databeamui;
 
+import android.app.Dialog;
 import android.app.PendingIntent;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -9,20 +10,25 @@ import android.net.Uri;
 import android.nfc.NdefMessage;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
+import android.os.Environment;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.tom_roush.pdfbox.util.PDFBoxResourceLoader;
 
+import databeam.databeamui.R;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URISyntaxException;
+import java.net.URL;
 
 public class DatabeamDisplayForm2 extends AppCompatActivity {
 
@@ -98,14 +104,12 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
                 //The user picked a PDF
                 Uri pdfUri = data.getData(); //The Uri to the PDF
                 try{
+                    String path = pdfUri.getPath();
+                    File myFile = new File(data.toString());
                     pdfReader formRead = new pdfReader();
-<<<<<<< HEAD
                     //AlertBoxes alert = new AlertBoxes();
-=======
-                    //AlertBox alert = new AlertBox();
->>>>>>> a7e09420001e25408bc7459ad81ee0810197772b
                     //alert.show(); //TODO:Actually figure out how to pass the path to the alertBox
-                    formRead.readForms(pdfUri, findViewById(R.id.basic));
+                    formRead.readForms(pdfUri);
                 } catch(IOException e){
                     e.printStackTrace();
                 } catch(URISyntaxException e){
