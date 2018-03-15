@@ -10,7 +10,7 @@ import android.os.Bundle;
  * Created by justin on 3/15/18.
  */
 
-public class AlertBoxes extends DialogFragment {
+public class AlertBox extends DialogFragment {
 
     public Dialog onCreateDialog(Bundle savedInstanceState, String path){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());

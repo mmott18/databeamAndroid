@@ -173,7 +173,7 @@ public class pdfReader extends Activity {
         }
     }
 
-    public void renderFile(PDDocument doc){
+    public void renderFile(PDDocument doc, View v){
         try{
             PDFRenderer renderer = new PDFRenderer(doc);
             pageImage = renderer.renderImage(0,1,Bitmap.Config.RGB_565);
@@ -184,7 +184,7 @@ public class pdfReader extends Activity {
             pageImage.compress(Bitmap.CompressFormat.JPEG, 100, fileOut);
             fileOut.close();
             tv.setText("Successfully rendered image to " + path);
-            displayRenderedImage();
+            //displayRenderedImage();
         } catch(Exception e){
             e.printStackTrace();
         }
@@ -333,12 +333,12 @@ public class pdfReader extends Activity {
     /**
      * Method for reading the forms of a PDF
      */
-    public void readForms(Uri input) throws IOException, URISyntaxException{
+    public void readForms(Uri input, View v) throws IOException, URISyntaxException{
         File pdfToOpen = new File(new URI(input.getPath()));
         PDDocument pdDoc = PDDocument.load(pdfToOpen);
-        PDDocumentCatalog pdCatalog = pdDoc.getDocumentCatalog();
-        PDAcroForm pdAcroForm = pdCatalog.getAcroForm();
-        renderFile(pdDoc);
+        //PDDocumentCatalog pdCatalog = pdDoc.getDocumentCatalog();
+        //PDAcroForm pdAcroForm = pdCatalog.getAcroForm();
+        renderFile(pdDoc, v);
 
     }
 }

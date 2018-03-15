@@ -31,4 +31,7 @@
     <string name="googleButton">Sign in with Google</string>
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
+
+    <!--Strings related to the Alert Boxes-->
+
 </resources>
