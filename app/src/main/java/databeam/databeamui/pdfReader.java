@@ -334,7 +334,7 @@ public class pdfReader extends Activity {
      * Method for reading the forms of a PDF
      */
     public void readForms(Uri input, View v) throws IOException, URISyntaxException{
-        File pdfToOpen = new File(new URI(input.getPath()));
+        File pdfToOpen = new File(input.getPath());
         PDDocument pdDoc = PDDocument.load(pdfToOpen);
         //PDDocumentCatalog pdCatalog = pdDoc.getDocumentCatalog();
         //PDAcroForm pdAcroForm = pdCatalog.getAcroForm();

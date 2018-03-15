@@ -107,9 +107,10 @@ public class DatabeamDisplayForm2 extends AppCompatActivity {
                     String path = pdfUri.getPath();
                     File myFile = new File(data.toString());
                     pdfReader formRead = new pdfReader();
+                    formRead.createPdf(findViewById(R.id.basic));
                     //AlertBoxes alert = new AlertBoxes();
                     //alert.show(); //TODO:Actually figure out how to pass the path to the alertBox
-                    formRead.readForms(pdfUri);
+                    formRead.readForms(pdfUri, findViewById(R.id.basic));
                 } catch(IOException e){
                     e.printStackTrace();
                 } catch(URISyntaxException e){
