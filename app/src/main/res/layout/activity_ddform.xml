@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="databeam.databeamui.DDForm"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/getFirst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/getMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Middle Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/getFirst"
+        app:layout_constraintTop_toTopOf="@+id/getFirst" />
+
+    <EditText
+        android:id="@+id/getLast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/getMiddle"
+        app:layout_constraintTop_toTopOf="@+id/getMiddle" />
+
+    <Button
+        android:id="@+id/storeText"
+        android:layout_width="212dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorButton"
+        android:text="@string/storeTextButton"
+        app:layout_constraintStart_toStartOf="@+id/getLast"
+        app:layout_constraintTop_toBottomOf="@+id/getLast" />
+</android.support.constraint.ConstraintLayout>
