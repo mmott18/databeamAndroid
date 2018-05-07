@@ -27,6 +27,11 @@ public class DDForm extends AppCompatActivity {
         final EditText inputFirst = (EditText) findViewById(R.id.getFirst);
         final EditText inputMiddle = (EditText) findViewById(R.id.getMiddle);
         final EditText inputLast = (EditText) findViewById(R.id.getLast);
+        final EditText address = (EditText) findViewById(R.id.getAddr);
+        final EditText city = (EditText) findViewById(R.id.getCity);
+        final EditText state = (EditText) findViewById(R.id.getState);
+        final EditText zip = (EditText) findViewById(R.id.getZip);
+        final EditText routingNumber = (EditText) findViewById(R.id.getRoutingNumber);
         Button storeText = (Button) findViewById(R.id.storeText);
         storeText.setOnClickListener(new View.OnClickListener() {
             @Override
