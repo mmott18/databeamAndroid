@@ -93,8 +93,8 @@
         android:layout_height="wrap_content"
         android:background="@color/colorButton"
         android:text="@string/storeTextButton"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="537dp" />
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="506dp" />
 
     <EditText
         android:id="@+id/getSavingsNumber"
@@ -111,7 +111,7 @@
         android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Routing Number"
+        android:hint="Bank's Routing Number"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="415dp" />
