@@ -19,7 +19,7 @@ import android.widget.ToggleButton;
 import org.w3c.dom.Text;
 
 public class DDForm extends AppCompatActivity {
-    public static String allInfo = "John Nobody Doe";
+    public static String allInfo = "John/Nobody/Doe/123 Green Street/The City/The State/12345";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +44,6 @@ public class DDForm extends AppCompatActivity {
         final String typedState = state.getText().toString();
         final String typedZip = zip.getText().toString();
         final String typedRouting = routingNumber.getText().toString();
-        final String typedChecking = checkingNumber.getText().toString();
-        final String typedSavings = savingsNumber.getText().toString();
 
         Button storeText = (Button) findViewById(R.id.storeText);
         storeText.setOnClickListener(new View.OnClickListener() {
@@ -84,19 +82,30 @@ public class DDForm extends AppCompatActivity {
                     routingNumber.setError("This field is required.");
                     empty = true;
                 }
+
+                String typedChecking = checkingNumber.getText().toString();
+                String typedSavings = savingsNumber.getText().toString();
+
                 if ((TextUtils.isEmpty(typedSavings)) && (TextUtils.isEmpty(typedChecking))) {
                     savingsNumber.setError("One of these fields must be filled.");
                     checkingNumber.setError("One of these fields must be fielled.");
                     empty = true;
                 }
-                if ((TextUtils.isEmpty(typedSavings)) && (TextUtils.isEmpty(typedChecking))) {
-                    savingsNumber.setError("One of these fields must be filled.");
-                    checkingNumber.setError("One of these fields must be fielled.");
+                else if (!(TextUtils.isEmpty(typedSavings)) && !(TextUtils.isEmpty(typedChecking))) {
+                    savingsNumber.setError("Cannot use both of these fields.");
+                    checkingNumber.setError("Cannot use both of these fields.");
                     empty = true;
+                }
+                else if (typedChecking.matches("")) {
+                    typedChecking = "None";
+                }
+                else if (typedSavings.matches("")) {
+                    typedSavings = "None";
                 }
                 if (!empty) {
                     allInfo = typedFirst + "/" + typedMiddle + "/" + typedLast + "/" + typedAddr
-                    + "/" + typedCity + "/" + typedState + "/" + typedZip + "/" + typedRouting;
+                    + "/" + typedCity + "/" + typedState + "/" + typedZip + "/" + typedRouting +
+                    "/" + typedChecking + "/" + typedSavings;
                 }
                 //System.out.println(fullName);
             }
