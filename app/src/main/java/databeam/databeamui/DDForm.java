@@ -51,6 +51,11 @@ public class DDForm extends AppCompatActivity {
                     inputLast.setError("This field is required.");
                     empty = true;
                 }
+                String typedAddr = address.getText().toString();
+                if (TextUtils.isEmpty(typedFirst)) {
+                    address.setError("This field is required.");
+                    empty = true;
+                }
                 if (!empty) {
                     fullName = typedFirst + " " + typedMiddle + " " + typedLast;
                 }

@@ -9,108 +9,90 @@
 
     <EditText
         android:id="@+id/getFirst"
-        android:layout_width="wrap_content"
+        android:layout_width="187dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/getMiddle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/getMiddle"
-        android:layout_width="wrap_content"
+        android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Middle Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/getLast"
-        app:layout_constraintStart_toStartOf="@+id/getFirst"
-        app:layout_constraintTop_toBottomOf="@+id/getFirst" />
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/getLast"
-        android:layout_width="wrap_content"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="79dp"
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/getAddr"
-        app:layout_constraintStart_toStartOf="@+id/getMiddle"
-        app:layout_constraintTop_toBottomOf="@+id/getMiddle" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="68dp" />
 
     <EditText
         android:id="@+id/getAddr"
-        android:layout_width="wrap_content"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="Address"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/getCity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/getLast" />
+        tools:layout_editor_absoluteX="18dp"
+        tools:layout_editor_absoluteY="158dp" />
 
     <EditText
         android:id="@+id/getCity"
-        android:layout_width="wrap_content"
+        android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="City"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/getState"
-        app:layout_constraintStart_toStartOf="@+id/getAddr"
-        app:layout_constraintTop_toBottomOf="@+id/getAddr" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="202dp" />
 
     <EditText
         android:id="@+id/getState"
-        android:layout_width="wrap_content"
+        android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="State"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/getZip"
-        app:layout_constraintStart_toStartOf="@+id/getCity"
-        app:layout_constraintTop_toBottomOf="@+id/getCity" />
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="202dp" />
 
     <EditText
         android:id="@+id/getZip"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="379dp"
+        android:layout_height="52dp"
         android:ems="10"
         android:hint="Zip Code"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/getRoutingNumber"
-        app:layout_constraintStart_toStartOf="@+id/getState"
-        app:layout_constraintTop_toBottomOf="@+id/getState" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="247dp" />
 
     <EditText
         android:id="@+id/getRoutingNumber"
-        android:layout_width="wrap_content"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="Routing Number"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/storeText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/getZip" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="482dp" />
 
     <Button
         android:id="@+id/storeText"
         android:layout_width="212dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="17dp"
         android:background="@color/colorButton"
         android:text="@string/storeTextButton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/getRoutingNumber" />
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="537dp" />
 </android.support.constraint.ConstraintLayout>
