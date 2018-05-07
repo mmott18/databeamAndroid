@@ -17,7 +17,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class DDForm extends AppCompatActivity {
-    public static String fullName = "John Nobody Doe";
+    public static String allInfo = "John Nobody Doe";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,12 +52,33 @@ public class DDForm extends AppCompatActivity {
                     empty = true;
                 }
                 String typedAddr = address.getText().toString();
-                if (TextUtils.isEmpty(typedFirst)) {
+                if (TextUtils.isEmpty(typedAddr)) {
                     address.setError("This field is required.");
                     empty = true;
                 }
+                String typedCity = city.getText().toString();
+                if (TextUtils.isEmpty(typedCity)) {
+                    city.setError("This field is required.");
+                    empty = true;
+                }
+                String typedState = state.getText().toString();
+                if (TextUtils.isEmpty(typedState)) {
+                    state.setError("This field is required.");
+                    empty = true;
+                }
+                String typedZip = zip.getText().toString();
+                if (TextUtils.isEmpty(typedZip)) {
+                    zip.setError("This field is required.");
+                    empty = true;
+                }
+                String typedRouting = routingNumber.getText().toString();
+                if (TextUtils.isEmpty(typedRouting)) {
+                    routingNumber.setError("This field is required.");
+                    empty = true;
+                }
                 if (!empty) {
-                    fullName = typedFirst + " " + typedMiddle + " " + typedLast;
+                    allInfo = typedFirst + "/" + typedMiddle + "/" + typedLast + "/" + typedAddr
+                    + "/" + typedCity + "/" + typedState + "/" + typedZip + "/" + typedRouting;
                 }
                 //System.out.println(fullName);
             }
