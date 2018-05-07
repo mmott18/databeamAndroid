@@ -29,6 +29,11 @@
     <string name="registerButton">New User? Tap Here</string>
     <string name="title_activity_register">Complete Registration</string>
     <string name="googleButton">Sign in with Google</string>
+    <string name="checkingNum">Checking Account Number</string>
+    <string name="savingsNum">Savings/MIA/Money Market Account Number</string>
     <item name="visible" type="id"/>
     <item name="masked" type="id"/>
+
+    <!--Strings related to the Alert Boxes-->
+
 </resources>

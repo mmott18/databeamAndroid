@@ -4,11 +4,14 @@ import android.app.Activity;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.tom_roush.pdfbox.pdmodel.PDDocument;
 import com.tom_roush.pdfbox.pdmodel.PDDocumentCatalog;
@@ -38,6 +41,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.security.Security;
 import java.util.ArrayList;
 import java.util.List;
@@ -51,7 +56,7 @@ public class pdfReader extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_databeam_display_form1);
+        setContentView(R.layout.activity_databeam_display_form2); //FIXME: not sure which layout to use
     }
 
     @Override
@@ -63,7 +68,7 @@ public class pdfReader extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.main, menu); //FIXME: not sure which menu to use
         return true;
     }
 
@@ -74,9 +79,9 @@ public class pdfReader extends Activity {
         // Enable Android-style asset loading (highly recommended)
         PDFBoxResourceLoader.init(getApplicationContext());
         // Find the root of the external storage.
-        root = android.os.Environment.getExternalStorageDirectory();
+        root = android.os.Environment.getRootDirectory();
         assetManager = getAssets();
-        tv = (TextView) findViewById(R.id.directdeposit);
+        tv = (TextView) findViewById(R.id.directdeposit); //FIXME: not sure which view to use
     }
 
     /**
@@ -169,6 +174,24 @@ public class pdfReader extends Activity {
         }
     }
 
+    public void renderFile(PDDocument doc, View v){
+        try{
+            PDFRenderer renderer = new PDFRenderer(doc);
+            pageImage = renderer.renderImage(0,1,Bitmap.Config.RGB_565);
+
+            String path = root.getAbsolutePath() + "/Download/render.jpg";
+            File renderFile = new File(path);
+            FileOutputStream fileOut = new FileOutputStream(renderFile);
+            pageImage.compress(Bitmap.CompressFormat.JPEG, 100, fileOut);
+            fileOut.close();
+            //tv.setText("Successfully rendered image to " + path);
+            Toast.makeText(getApplicationContext(),"Successfully rendered image to " + path, Toast.LENGTH_SHORT).show();
+            //displayRenderedImage();
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
     /**
      * Fills in a PDF form and saves the result
      */
@@ -211,6 +234,7 @@ public class pdfReader extends Activity {
 
     /**
      * Strips the text from a PDF and displays the text on screen
+     * @param v
      */
     public void stripText(View v) {
         String parsedText = null;
@@ -306,5 +330,18 @@ public class pdfReader extends Activity {
                 });
             }
         }.start();
+    }
+
+    /**
+     * Method for reading the forms of a PDF
+     */
+    public void readForms(Uri input, View v) throws IOException, URISyntaxException{
+        File pdfToOpen = new File("content://com.android.providers.downloads.documents/document/44");
+        System.out.println(input.getPath());
+        PDDocument pdDoc = PDDocument.load(pdfToOpen);
+        //PDDocumentCatalog pdCatalog = pdDoc.getDocumentCatalog();
+        //PDAcroForm pdAcroForm = pdCatalog.getAcroForm();
+        renderFile(pdDoc, v);
+
     }
 }

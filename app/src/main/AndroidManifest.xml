@@ -51,6 +51,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Testing"></activity>
+        <activity android:name=".DDForm"></activity>
 
         <service android:name=".HostNFC" android:exported="true" android:permission="android.permission.BIND_NFC_SERVICE" >
             <intent-filter>
