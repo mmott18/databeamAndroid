@@ -19,12 +19,12 @@
 
     <EditText
         android:id="@+id/getMiddle"
-        android:layout_width="187dp"
+        android:layout_width="188dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Middle Name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteX="207dp"
         tools:layout_editor_absoluteY="16dp" />
 
     <EditText
@@ -35,7 +35,7 @@
         android:hint="Last Name"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="68dp" />
+        tools:layout_editor_absoluteY="61dp" />
 
     <EditText
         android:id="@+id/getAddr"
@@ -44,8 +44,8 @@
         android:ems="10"
         android:hint="Address"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="158dp" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="135dp" />
 
     <EditText
         android:id="@+id/getCity"
@@ -55,37 +55,37 @@
         android:hint="City"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="202dp" />
+        tools:layout_editor_absoluteY="180dp" />
 
     <EditText
         android:id="@+id/getState"
-        android:layout_width="187dp"
+        android:layout_width="188dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="State"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="208dp"
-        tools:layout_editor_absoluteY="202dp" />
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="180dp" />
 
     <EditText
         android:id="@+id/getZip"
-        android:layout_width="379dp"
+        android:layout_width="375dp"
         android:layout_height="52dp"
         android:ems="10"
         android:hint="Zip Code"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="247dp" />
+        tools:layout_editor_absoluteY="225dp" />
 
     <EditText
-        android:id="@+id/getRoutingNumber"
-        android:layout_width="379dp"
+        android:id="@+id/getCheckingNumber"
+        android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Routing Number"
+        android:hint="Checking Account Number"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="482dp" />
+        tools:layout_editor_absoluteY="370dp" />
 
     <Button
         android:id="@+id/storeText"
@@ -95,4 +95,24 @@
         android:text="@string/storeTextButton"
         tools:layout_editor_absoluteX="100dp"
         tools:layout_editor_absoluteY="537dp" />
+
+    <EditText
+        android:id="@+id/getSavingsNumber"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Savings/MIA/Money Market Account Number"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="325dp" />
+
+    <EditText
+        android:id="@+id/getRoutingNumber"
+        android:layout_width="375dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Routing Number"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="415dp" />
 </android.support.constraint.ConstraintLayout>
