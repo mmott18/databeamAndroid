@@ -69,28 +69,7 @@ public class DatabeamMain extends AppCompatActivity {
         rb2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String url = "https://www.chase.com/content/dam/chasecom/en/checking/documents/45969_directdeposit.pdf";
-                File applictionFile =  new File(Environment.getExternalStoragePublicDirectory(
-                        Environment.DIRECTORY_DOWNLOADS)+ "/directdepost.pdf");
-//                Toast.makeText(getApplicationContext(), "Selected PDF at " + applictionFile.toString(), Toast.LENGTH_LONG).show();
-//                if(!applictionFile.exists()) {
-//                    DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-//                    request.setDescription("Direct Deposit Form");
-//                    request.setTitle("directdeposit.pdf");
-//
-//                    // in order for this if to run, you must use the android 3.2 to compile your app
-//                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-//                        request.allowScanningByMediaScanner();
-//                        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-//                    }
-//                    request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "directdeposit.pdf");
-//
-//
-//                    // get download service and enqueue file
-//                    DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-//                    manager.enqueue(request);
-//                }
-                startActivity(new Intent(DatabeamMain.this, DatabeamDisplayForm2.class));
+                startActivity(new Intent(DatabeamMain.this, DDForm.class));
             }
         });
 

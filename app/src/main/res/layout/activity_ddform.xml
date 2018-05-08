@@ -9,110 +9,146 @@
 
     <EditText
         android:id="@+id/getFirst"
-        android:layout_width="187dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/getLast"
+        app:layout_constraintEnd_toStartOf="@+id/getMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/getMiddle"
-        android:layout_width="188dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:ems="10"
         android:hint="Middle Name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="207dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintBottom_toTopOf="@+id/getLast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/getFirst" />
 
     <EditText
         android:id="@+id/getLast"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintBottom_toTopOf="@+id/getAddress"
+        app:layout_constraintEnd_toStartOf="@+id/getMiddle"
+        app:layout_constraintStart_toStartOf="@+id/getMiddle"
+        app:layout_constraintTop_toBottomOf="@+id/getFirst" />
 
     <EditText
-        android:id="@+id/getAddr"
+        android:id="@+id/getAddress"
         android:layout_width="375dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Address"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="135dp" />
+        app:layout_constraintBottom_toTopOf="@+id/getCity"
+        app:layout_constraintEnd_toEndOf="@+id/getCity"
+        app:layout_constraintStart_toEndOf="@+id/getCity"
+        app:layout_constraintTop_toBottomOf="@+id/getLast" />
 
     <EditText
         android:id="@+id/getCity"
-        android:layout_width="187dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="City"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="180dp" />
+        app:layout_constraintBottom_toTopOf="@+id/getZipCode"
+        app:layout_constraintEnd_toStartOf="@+id/getState"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getAddress" />
 
     <EditText
         android:id="@+id/getState"
-        android:layout_width="188dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
         android:ems="10"
         android:hint="State"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="203dp"
-        tools:layout_editor_absoluteY="180dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/getCity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/getCity" />
 
     <EditText
-        android:id="@+id/getZip"
+        android:id="@+id/getZipCode"
         android:layout_width="375dp"
-        android:layout_height="52dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="48dp"
         android:ems="10"
         android:hint="Zip Code"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="225dp" />
+        app:layout_constraintBottom_toTopOf="@+id/getSaveAcct"
+        app:layout_constraintEnd_toEndOf="@+id/getCity"
+        app:layout_constraintStart_toEndOf="@+id/getCity"
+        app:layout_constraintTop_toBottomOf="@+id/getCity" />
 
     <EditText
-        android:id="@+id/getCheckingNumber"
-        android:layout_width="375dp"
+        android:id="@+id/getCheckAcct"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="Checking Account Number"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="370dp" />
+        app:layout_constraintBottom_toTopOf="@+id/getRoutNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getSaveAcct" />
 
     <Button
         android:id="@+id/storeText"
         android:layout_width="212dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
         android:background="@color/colorButton"
         android:text="@string/storeTextButton"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="506dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getRoutNum" />
 
     <EditText
-        android:id="@+id/getSavingsNumber"
-        android:layout_width="375dp"
+        android:id="@+id/getSaveAcct"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="Savings/MIA/Money Market Account Number"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="325dp" />
+        app:layout_constraintBottom_toTopOf="@+id/getCheckAcct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getZipCode" />
 
     <EditText
-        android:id="@+id/getRoutingNumber"
-        android:layout_width="375dp"
+        android:id="@+id/getRoutNum"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
         android:ems="10"
         android:hint="Bank's Routing Number"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="415dp" />
+        app:layout_constraintBottom_toTopOf="@+id/storeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getCheckAcct" />
 </android.support.constraint.ConstraintLayout>
