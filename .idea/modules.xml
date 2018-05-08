@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Databeam.iml" filepath="$PROJECT_DIR$/Databeam.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../../../../../../../justi/StudioProjects/Databeam/databeamAndroid.iml" filepath="$PROJECT_DIR$/../../../../../../../justi/StudioProjects/Databeam/databeamAndroid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/databeamAndroid.iml" filepath="$PROJECT_DIR$/databeamAndroid.iml" />
+      <module fileurl="file:///../../../justi/StudioProjects/Databeam/databeamAndroid.iml" filepath="/../../../justi/StudioProjects/Databeam/databeamAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/itextpdf-5.5.13/itextpdf-5.5.13.iml" filepath="$PROJECT_DIR$/itextpdf-5.5.13/itextpdf-5.5.13.iml" />
     </modules>
   </component>

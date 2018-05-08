@@ -22,14 +22,14 @@ public class HostNFC extends HostApduService {
             case 0x02:
 
                 return strToHex(Testing.fullName);
-/*            case 0x03:
+            case 0x03:
 
                 try{
-                    output = SerializationClass.serialization(object);
+                    output = SerializationClass.serialization(DDForm.DDMethods);
                 }catch(IOException e){
                     e.printStackTrace();
                 }
-                return output;*/
+                return output;
             default:
         }       return "Incorrect/Missing Command".getBytes();
 

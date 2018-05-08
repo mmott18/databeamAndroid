@@ -24,7 +24,7 @@ import dataClasses.DirectDeposit;
 public class DDForm extends AppCompatActivity {
     public static String allInfo = "John/Nobody/Doe/123 Green Street/The City/The State/12345";
 
-    DirectDeposit DDMethods = new DirectDeposit();
+    public static DirectDeposit DDMethods = new DirectDeposit();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
