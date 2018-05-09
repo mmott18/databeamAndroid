@@ -59,12 +59,7 @@
             </intent-filter>
             <meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@xml/apduservice"/>
         </service>
-        <service android:name=".TestNFC3" />
 
-        <activity
-            android:name=".Register"
-            android:label="@string/title_activity_register"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

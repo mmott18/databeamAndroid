@@ -1,10 +1,5 @@
 package dataClasses;
 
-import android.os.Bundle;
-import android.widget.EditText;
-
-import databeam.databeamui.R;
-
 public class DirectDeposit extends BasicInfo {
 
     private String address;
