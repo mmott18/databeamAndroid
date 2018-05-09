@@ -102,14 +102,19 @@ public class DDForm extends AppCompatActivity {
                 }
                 else if (typedChecking.matches("")) {
                     typedChecking = "None";
+                    empty = false;
                 }
                 else if (typedSavings.matches("")) {
                     typedSavings = "None";
+                    empty = false;
                 }
                 if (!empty) {
 //                    allInfo = typedFirst + "/" + typedMiddle + "/" + typedLast + "/" + typedAddr
 //                    + "/" + typedCity + "/" + typedState + "/" + typedZip + "/" + typedRouting +
 //                    "/" + typedChecking + "/" + typedSaving;
+                    savingsNumber.setError(null);
+                    checkingNumber.setError(null);
+
                     DDMethods.setFirstName(typedFirst);
                     DDMethods.setMiddleName(typedMiddle);
                     DDMethods.setLastName(typedLast);
